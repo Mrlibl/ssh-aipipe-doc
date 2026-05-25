@@ -1,0 +1,227 @@
+<template>
+  <div class="doc-page">
+    <h1>{{ title }}</h1>
+    <br />
+
+    <h2>第一步：安装与基础初始化</h2>
+    <p>首先确保你已经安装了 Node.js 环境，然后在终端执行：</p>
+
+    <h3>1. 全局安装</h3>
+    <div class="code-block">
+      <pre><code>npm install -g openclaw@latest</code></pre>
+    </div>
+
+    <h3>2. 执行引导初始化</h3>
+    <div class="code-block">
+      <pre><code>openclaw onboard</code></pre>
+    </div>
+    <p>根据提示完成基础设置即可。</p>
+
+    <h2>第二步：修改主配置文件 openclaw.json</h2>
+    <p>配置文件路径：</p>
+    <div class="code-block">
+      <pre><code>C:\Users\admin\.openclaw\openclaw.json</code></pre>
+    </div>
+    <p>将 <code>models</code> 和 <code>auth</code> 部分修改为以下内容，以支持自定义中转站：</p>
+
+    <div class="code-block">
+      <pre><code>{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "api-proxy-claude/claude-sonnet-4-5-20250929"
+      },
+      "models": {
+        "api-proxy-gpt/gpt-5.2": {
+          "alias": "GPT-5.2"
+        },
+        "api-proxy-claude/claude-sonnet-4-5-20250929": {
+          "alias": "Claude Sonnet 4.5"
+        },
+        "api-proxy-google/gemini-3-pro-preview": {
+          "alias": "Gemini 3 Pro"
+        },
+        "api-proxy-deepseek/deepseek-v3.2": {
+          "alias": "Deepseek v3.2"
+        }
+      },
+      "workspace": "C:\\Users\\admin\\clawd",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "api-proxy-gpt:default": {
+        "provider": "api-proxy-gpt",
+        "mode": "api_key"
+      },
+      "api-proxy-claude:default": {
+        "provider": "api-proxy-claude",
+        "mode": "api_key"
+      },
+      "api-proxy-google:default": {
+        "provider": "api-proxy-google",
+        "mode": "api_key"
+      },
+      "api-proxy-deepseek:default": {
+        "provider": "api-proxy-deepseek",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "api-proxy-gpt": {
+        "baseUrl": "https://api.aipipe.io/v1",
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "gpt-5.2",
+            "name": "GPT-5.2",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "api-proxy-claude": {
+        "baseUrl": "https://api.aipipe.io",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "claude-sonnet-4-5-20250929",
+            "name": "Claude Sonnet 4.5",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "api-proxy-google": {
+        "baseUrl": "https://api.aipipe.io/v1",
+        "api": "google-generative-ai",
+        "models": [
+          {
+            "id": "gemini-3-pro-preview",
+            "name": "Gemini 3 Pro",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2000000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "api-proxy-deepseek": {
+        "baseUrl": "https://api.aipipe.io/v1",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek-v3.2",
+            "name": "Deepseek v3.2",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 2000000,
+            "maxTokens": 8192
+          }
+        ]
+      }
+    }
+  }
+}</code></pre>
+    </div>
+
+    <h2>第三步：配置鉴权文件 auth-profiles.json</h2>
+    <p>配置文件路径：</p>
+    <div class="code-block">
+      <pre><code>C:\Users\admin\.openclaw\agents\main\agent\auth-profiles.json</code></pre>
+    </div>
+    <p>在此处填入你从中转站获取的真实 API Key：</p>
+
+    <div class="code-block">
+      <pre><code>{
+  "version": 1,
+  "profiles": {
+    "api-proxy-gpt:default": {
+      "type": "api_key",
+      "provider": "api-proxy-gpt",
+      "key": "sk-your-unique-gpt-key-here"
+    },
+    "api-proxy-claude:default": {
+      "type": "api_key",
+      "provider": "api-proxy-claude",
+      "key": "sk-your-unique-claude-key-here"
+    },
+    "api-proxy-google:default": {
+      "type": "api_key",
+      "provider": "api-proxy-google",
+      "key": "sk-your-unique-google-key-here"
+    },
+    "api-proxy-deepseek:default": {
+      "type": "api_key",
+      "provider": "api-proxy-deepseek",
+      "key": "sk-your-unique-deepseek-key-here"
+    }
+  }
+}</code></pre>
+    </div>
+
+    <h2>第四步：检查并启动</h2>
+    <h3>1. 启动 Gateway 服务</h3>
+    <div class="code-block">
+      <pre><code>openclaw gateway --port 18789</code></pre>
+    </div>
+
+    <h3>2. 访问控制台</h3>
+    <p>打开浏览器访问：</p>
+    <div class="code-block">
+      <pre><code>http://127.0.0.1:18789/</code></pre>
+    </div>
+  </div>
+</template>
+
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    default: 'OpenClaw 最新版本 自定义中转站配置教程'
+  }
+})
+</script>

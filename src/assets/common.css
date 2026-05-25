@@ -1,0 +1,410 @@
+/* 基础链接样式 */
+a {
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.24s ease;
+  border-bottom: 2px solid transparent;
+}
+
+/* 鼠标悬浮 */
+a:hover {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* 点击瞬间 */
+a:active {
+  color: #1d4ed8;
+  border-bottom: 2px solid #1d4ed8;
+}
+
+/* 已访问过 */
+a:visited {
+  color: #4b5563;
+}
+
+/* 聚焦状态（键盘 Tab 选中） */
+a:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  border-radius: 2px;
+}
+/* 全局 API 文档样式 - 全部内容靠左 */
+/* 全局浅白色滚动条 → 专门适配你的文档 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f6f6; /* 轨道浅白色 */
+}
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9; /* 滑块浅灰色 */
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
+}
+
+/* 代码块内部滚动条也统一 */
+pre::-webkit-scrollbar {
+  width: 6px;
+  height: 6p;
+}
+pre::-webkit-scrollbar-track {
+  background: transparent;
+}
+pre::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+.api-page {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0;
+  text-align: left !important;
+}
+
+/* 标题：靠左 + 小字号 */
+.api-page h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 22px 0;
+  text-align: left !important;
+}
+
+/* 段落：靠左 */
+.api-page p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #374151;
+  margin: 0 0 12px 0;
+  text-align: left !important;
+}
+
+/* 代码块：靠左 */
+.api-page pre {
+  background: #fff;
+  color: #f9fafb;
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto;
+  line-height: 1.6;
+  margin: 16px 0;
+  text-align: left !important;
+}
+
+/* 行内代码：靠左 */
+.api-page code {
+  background: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: left !important;
+}
+
+/* 全局强制靠左 */
+* {
+  text-align: left !important;
+}
+
+.imgw{width: 100%;}
+
+
+.doc-page {
+  background-color: #fff;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 0;
+  line-height: 1.75;
+  color: #333;
+}
+
+.doc-page h1 {
+  font-size: 26px;
+  margin-bottom: 22px;
+  color: #111;
+}
+
+.doc-page h2 {
+  font-size: 20px;
+  margin: 26px 0 14px;
+  color: #222;
+}
+
+.doc-page h3 {
+  font-size: 17px;
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+.doc-page p {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+/* 行内代码 */
+.doc-page code {
+  background: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+/* 代码块 */
+.doc-page .code-block {
+  background: #222;
+  color:#fff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.doc-page .code-block pre {
+  margin: 0;
+}
+.doc-page .code-block code {
+  background: transparent;
+  color: #fff;
+  padding: 0;
+}
+
+/* 表格相关 */
+.doc-page .table-container {
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+.doc-page table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.doc-page th,
+.doc-page td {
+  border: 1px solid #eee;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.doc-page th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+.doc-page td {
+  background: #fff;
+}
+
+/* 列表 */
+.doc-page .explain {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+.doc-page .explain li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* 提示文字 */
+.doc-page .tip {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #666;
+}
+
+.doc-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/*  */
+/* 原有样式不动 */
+.param-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.section-header {
+  padding: 12px 16px;
+  background: #f9fafb;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+.section-content {
+  padding: 16px;
+  font-size: 14px;
+  color: #666;
+}
+.arrow {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.param-table {
+  padding: 16px;
+}
+.param-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.param-name {
+  font-weight: 500;
+  font-size: 14px;
+}
+.param-type {
+  color: #666;
+  font-size: 13px;
+}
+.param-required {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+}
+.param-required.required {
+  color: #f97316;
+}
+.param-required.optional {
+  color: #666;
+}
+.param-desc {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.body-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.body-section .section-title {
+  padding: 12px 16px;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.body-type {
+  font-size: 12px;
+  color: #666;
+  background: #e5e7eb;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.body-content {
+  display: flex;
+}
+.param-list {
+  flex: 1;
+  padding: 16px;
+  border-right: 1px solid #e5e7eb;
+}
+.param-item {
+  margin-bottom: 16px;
+}
+.param-item.nested {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+.param-subtitle {
+  color: #666;
+  font-size: 13px;
+  margin-left: 6px;
+}
+.nested-param {
+  margin-top: 8px;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 12px;
+}
+
+.example-panel {
+  width: 320px;
+  background: #fafafa;
+  padding: 6px;
+}
+.example-title {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+}
+.code-example {
+  background: #fff;
+  color: #f9fafb;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-x: auto;
+  margin: 0;
+}
+
+/* ==================== 手机端适配（自动双栏转单栏） ==================== */
+@media (max-width: 768px) {
+  .body-content {
+    flex-direction: column;
+  }
+  .param-list {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 12px;
+  }
+  .example-panel {
+    width: 100%;
+    padding: 12px;
+  }
+  .param-row {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .nested-param {
+    margin-left: 0;
+    padding-left: 8px;
+  }
+  .param-item.nested {
+    margin-left: 10px;
+  }
+}
+
+/* 导航菜单选中淡蓝优化（新增，不影响原有） */
+/* 导航菜单 - 给盒子加选中背景（正确版） */
+.menu-item,
+.l2-item,
+.l3-item,
+.l4-item {
+  transition: all 0.2s ease;
+}
+
+/* 悬浮效果（盒子） */
+.menu-item:hover,
+.l2-item:hover,
+.l3-item:hover,
+.l4-item:hover {
+  background: #eff6ff;
+}
+
+/* 选中效果（盒子）淡蓝色背景 */
+.menu-item.active,
+.l2-item.active,
+.l3-item.active,
+.l4-item.active {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+  font-weight: 500;
+}

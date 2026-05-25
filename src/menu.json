@@ -1,0 +1,54 @@
+[
+  {"title": "引言", "key": "yinyan","component": "yinyan" },
+  {"title": "发出请求", "key": "fcqq","component": "fcqq" },
+  {"title": "一、前置准备（必装）", "key": "qzzbbz","component": "qzzbbz" },
+  {
+    "title": "各种插件/软件使用教程",
+    "key": "各种插件/软件使用教程",
+    "children": [
+		   {"title": "Codex 配置教程",   										"dir": "CJ",	"key": "Codex" , 		"component": "Codex" },
+		   {"title": "vscode配置教程",   										"dir": "CJ",	"key": "vscode"  		, "component": "vscode" },
+		   {"title": "trae完整配置教程",   										"dir": "CJ",	"key": "trae"  			, "component": "trae" },
+		   {"title": "OpenClaw Clawdbot 自定义中转站配置教程",   					"dir": "CJ",	"key": "Clawdbot"  		, "component": "Clawdbot" },
+		   {"title": "N8N 工作流使用中转API 教程",   								"dir": "CJ",	"key": "N8N"  			, "component": "N8N" },
+		   {"title": "opencode 配置教程",   										"dir": "CJ",	"key": "opencode"  		, "component": "opencode" },
+		   {"title": "Gemini CLI 中转站配置使用教程",   							"dir": "CJ",	"key": "Gemini"  		, "component": "Gemini" },
+		   {"title": "Claude Code 安装使用教程",   								"dir": "CJ",	"key": "Claude"  		, "component": "Claude" },
+		   {"title": "CherryStudio调用cluade MCP",   							"dir": "CJ",	"key": "MCP"  			, "component": "MCP" },
+		   {"title": "Cherry Studio配置教程",   									"dir": "CJ",	"key": "setCherry"  	, "component": "setCherry" },
+	
+		   {"title": "CherryStudio配置o4推理级别",   								"dir": "CJ",	"key": "o4"  			, "component": "o4" },
+		   {"title": "扣子工作流简单配置从输入到获取url",   						"dir": "CJ",	"key": "getUrl"  		, "component": "getUrl" },
+		   {"title": "dify添加模型",   											"dir": "CJ",	"key": "dify"  			, "component": "dify" },
+		   {"title": "cline 配置教程",   										"dir": "CJ",	"key": "cline"  		, "component": "cline" },
+		   {"title": "aider 配置教程 ",   										"dir": "CJ",	"key": "aider"  		, "component": "aider" },   
+		   {"title": "Cursor 配置教程",   										"dir": "CJ",	"key": "Cursor"  		, "component": "Cursor" },
+		   {"title": "lobechat 设置教程",   										"dir": "CJ",	"key": "lobechat"  		, "component": "lobechat" },
+		   {"title": "ChatBox(推荐使用)",   										"dir": "CJ",	"key": "ChatBox"  		, "component": "ChatBox" },
+		   {"title": "开源gpt_academic",   										"dir": "CJ",	"key": "gpt_academic"  	, "component": "gpt_academic" },
+		   {"title": "nextchat 设置教程",   										"dir": "CJ",	"key": "nextchat"  		, "component": "nextchat" },
+		   {"title": "zotero gpt 配置方法",   									"dir": "CJ",	"key": "zotero"  		, "component": "zotero" },
+		   {"title": "CLAUDE DEV 配置教程",   									"dir": "CJ",	"key": "DEV"  		    , "component": "DEV" },
+		   {"title": "沉浸式翻译 设置gpt翻译",   									"dir": "CJ",	"key": "setgpt"  		, "component": "setgpt" },
+		   {"title": "浏览器插件ChatGPT Sidebar",   								"dir": "CJ",	"key": "Sidebar"  		, "component": "Sidebar" },
+		   {"title": "chatgpt-on-wechat 配置教程",   							"dir": "CJ",	"key": "wechat"  		, "component": "wechat" },
+		   {"title": "chatgpt GPT Academic 学术优化配置gpt教程",   				"dir": "CJ",	"key": "Academic"  		, "component": "Academic" },
+		   {"title": "RikkaHub 配置教程",   										"dir": "CJ",	"key": "RikkaHub"  		, "component": "RikkaHub" },		  
+		   {"title": "coze 工作流使用中转API 教程",   							"dir": "CJ",	"key": "coze"  			, "component": "coze" },		
+		   {"title": "OpenClaw 最新版本 自定义中转站配置教程",   					"dir": "CJ",	"key": "OpenClaw_new"  	, "component": "OpenClaw_new" },
+		   {"title": "OpenClaw配合CC switch自定义中转站配置教程",   				"dir": "CJ",	"key": "OpenClaw_cc"  	, "component": "OpenClaw_cc" }						  
+	]
+  },
+  
+  
+  {
+    "title": "帮助中心",
+    "key": "帮助中心",
+    "children": [
+  		   {"title": "AI返回字段: 思考相关",   					"dir": "help",	"key": "AI" , 		"component": "AI" },
+  		   {"title": "HTTP状态码及其含义",   						"dir": "help",	"key": "status"  		, "component": "status" }
+
+  	]
+  }
+  
+]

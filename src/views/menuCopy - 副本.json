@@ -1,0 +1,77 @@
+[
+  {"title": "引言", "key": "yinyan","component": "yinyan" },
+  {"title": "在线调试说明", "key": "dxtssm","component": "dxtssm" },
+  {"title": "发出请求", "key": "fcqq","component": "fcqq" },
+    {"title": "一、前置准备（必装）", "key": "qzzbbz","component": "qzzbbz" },
+  {
+    "title": "中转站基本介绍",
+    "key": "auth",
+    "children": [
+        {"title": "API 快速开始指南",   		"dir": "zzcjj",	"key": "apikskszn"  	, "component": "apikskszn" },
+	    {"title": "联系客服",  				"dir": "zzcjj",	"key": "lxkf"			, "component": "lxkf" },
+		{"title": "分组详细表格",  			"dir": "zzcjj",	"key": "fzxxbg"			, "component": "fzxxbg" },
+		{"title": "引擎使用视频教程", 	"dir": "zzcjj",	"key": "xlyqsyspjc" 	, "component": "xlyqsyspjc" },
+		{"title": "分组的特殊性及价格差异",	"dir": "zzcjj", "key": "fzrttxj"		, "component": "fzrttxj" },
+		{"title": "如何新建指定分组的令牌",	"dir": "zzcjj",  "key": "rhxjzdfz"		, "component": "rhxjzdfz" },
+		{"title": "代理接口调用地址",  		"dir": "zzcjj",	"key": "dljkdydz"		, "component": "dljkdydz" },
+		{"title": "API Key 额度查询服务", 	"dir": "zzcjj", 	"key": "apikeyedcxfw"	, "component": "apikeyedcxfw" },
+		{"title": "免费AI聊天项目导航",  	"dir": "zzcjj",	"key": "mfailtxmdh"		, "component": "mfailtxmdh","method":"GET" }
+    ]
+  },  {
+    "title": "聊天（Chat）接口",
+    "key": "ChatGPT",
+    "children": [
+		{
+		  "title": "ChatGPT 接口",  "key": "ChatGPT 接口",
+		  "children": [
+				 {"title": "ChatGPT音频",   		"dir": "",	"key": "ChatGPT音频"  	, "component": "",
+				  "children": [
+					  {"title": "GPT-4o-audio",   		"dir": "gpt",	"key": "GPT-4o-audio"  	, "component": "GPT-4o-audio","method":"POST" },
+					  {"title": "音频转文字 whisper-1",   		"dir": "gpt",	"key": "whisper-1"  	, "component": "whisper-1","method":"POST" },
+				 	  {"title": "音频转文字 gpt-4o-transcribe",   		"dir": "gpt",	"key": "gpt-4o-transcribe"  	, "component": "gpt-4o-transcribe","method":"POST" },
+					  {"title": "创建语音 gpt-4o-mini-tts",   		   "dir": "gpt",	"key": "gpt-4o-mini-tts"  	, "component": "gpt-4o-mini-tts","method":"POST" },
+					  {"title": "创建翻译 (不支持)",   		   		    "dir": "gpt",	"key": "audioFY"  	, "component": "audioFY","method":"POST" }
+				  ]
+			  },	
+				  /* {"title": "ChatGPT聊天（Chat）",   		"dir": "",	"key": "ChatGPT聊天（Chat）"  	, "component": "",
+				  "children": [
+					  {"title": "聊天完成对象",   								"dir": "gpt",	"key": "LT_wcdx"  				, "component": "LT_wcdx","method":"POST" },
+					  {"title": "聊天完成块对象",   								"dir": "gpt",	"key": "LT_wckdx"  				, "component": "LT_wckdx","method":"POST" },
+					  {"title": "创建聊天补全(流式）",   							"dir": "gpt",	"key": "LT_cjlt_ls"  			, "component": "LT_cjlt_ls","method":"POST" },
+					  {"title": "创建聊天补全(非流）",   							"dir": "gpt",	"key": "LT_cjlt_fl"  			, "component": "LT_cjlt_fl","method":"POST" },
+					  {"title": "创建聊天识图(流式）",   							"dir": "gpt",	"key": "LT_cjltst_ls"  			, "component": "LT_cjltst_ls","method":"POST" },
+					  {"title": "创建聊天识图(流式）best64",   					"dir": "gpt",	"key": "LT_cjltst_ls_best"  	, "component": "LT_cjltst_ls_best","method":"POST" },
+					  {"title": "创建聊天识图(非流）",   							"dir": "gpt",	"key": "LT_cjltst_fl"  			, "component": "LT_cjltst_fl","method":"POST" },
+					  {"title": "创建聊天创作图(非流）",   						"dir": "gpt",	"key": "LT_cjltczt_fl"  		, "component": "LT_cjltczt_fl","method":"POST" },
+					  {"title": "官方Function calling调用",   					"dir": "gpt",	"key": "LT_Function_calling"  	, "component": "LT_Function_calling","method":"POST" },
+					  {"title": "官方N测试",   									"dir": "gpt",	"key": "LT_N"  					, "component": "LT_N","method":"POST" },
+					  {"title": "列出模型",   									"dir": "gpt",	"key": "LT_LIST"  				, "component": "LT_LIST","method":"POST" },
+					  {"title": "创建聊天函数调用",   							"dir": "gpt",	"key": "LT_cjlthsdy"  			, "component": "LT_cjlthsdy","method":"POST" },
+					  {"title": "创建结构化输出",   								"dir": "gpt",	"key": "LT_cjjghsc"  			, "component": "LT_cjjghsc","method":"POST" },
+					  {"title": "控制推理模型努力程度",   						"dir": "gpt",	"key": "LT_kztlmxnlcd"  		, "component": "LT_kztlmxnlcd","method":"POST" },
+					  {"title": "创建聊天补全 qwen-mt-turbo",   					"dir": "gpt",	"key": "LT_qwen-mt-turbo"  		, "component": "LT_qwen-mt-turbo","method":"POST" },
+					  {"title": "创建聊天补全 deepseek v3.1思考程度 (流式）",   	"dir": "gpt",	"key": "LT_deepseek_ls"  			, "component": "LT_deepseek_ls","method":"POST" },
+					  {"title": "deepseek-ocr 识别",   							"dir": "gpt",	"key": "LT_deepseek_ocr"  			, "component": "LT_cjjghsc","method":"POST" }
+				  ]
+			  }*/
+		  ]
+		}
+    ]
+  },
+  {
+    "title": "认证授权",
+    "key": "auth1",
+    "children": [
+      {
+        "title": "API-KEY 认证",
+        "key": "api-key",
+        "component": "AuthKey"
+      },
+      {
+        "title": "错误码",
+        "key": "error",
+        "component": "ErrorCode"
+      }
+    ]
+  }
+]
