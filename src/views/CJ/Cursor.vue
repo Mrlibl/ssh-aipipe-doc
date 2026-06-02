@@ -1,7 +1,7 @@
 <template>
   <div class="doc-page">
   <h1>Cursor 配置教程</h1>
-  <img class="doc-img" src="./../../assets/image/cj/Cursor/加载模型.png" alt="" />
+  <img class="doc-img" src="./../../assets/image/cj/Cursor/cursor.png" alt="" />
   
     <h3>配置文件</h3>
   <div class="code-block">
